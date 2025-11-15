@@ -32,3 +32,40 @@ nav ul li {
   display: inline-block;
   margin-right: 430px; /* Adjust spacing */
 }
+.navig {
+  font-weight: bold;   
+  border: 2px solid royalblue;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  width: 10cm;
+  background-color: royalblue;
+  color: white;       
+  padding: 10px;
+  cursor: pointer;    
+}
+
+.navig ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navig:hover ul {
+  display: block;
+}
+
+.navig ul li {
+  border-top: 2px solid royalblue;
+  background-color: white;
+  width: 10cm;
+  color: black;
+  display: block;
+}
+
+.navig ul li:hover {
+  background-color: powderblue;
+}
+
+
+
