@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Sign-up Page">
+  <title>Sign-up</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+    /* Your nav style */
+    .navbar ul {
+      list-style-type: none;
+      background-color: hsl(0, 0%, 25%);
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: block;
+      text-align: center;
+    }
+    .navbar a:hover {
+      background-color: hsl(0, 0%, 10%);
+    }
+    .navbar li {
+      float: left;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-right: 300px; /* spacing like your login nav */
+    }
+
+    /* Form styling */
+    form {
+      width: 350px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: hsl(0, 0%, 25%);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: hsl(0, 0%, 10%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav bar same as your login page -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="mainpage.html">Home</a></li>
+      <li><a href="aboutus.html">About us</a></li>
+      <li><a href="Signup.html">Sign-up</a></li>
+      <li><a href="Login.html">Log-in</a></li>
+    </ul>
+  </nav>
+
+  <h1>Sign-up</h1>
+
+  <form name="signupForm" onsubmit="return validateSignup();">
+    <label for="fullname">Full Name:</label>
+    <input id="fullname" type="text" name="fullname" placeholder="Enter your full name">
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email" placeholder="Enter your email">
+
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" placeholder="Enter a password">
+
+    <label for="confirm">Confirm Password:</label>
+    <input id="confirm" type="password" name="confirm" placeholder="Re-enter your password">
+
+    <input type="submit" value="Sign-up">
+  </form>
+
+  <script>
+    function validateSignup() {
+      const name = document.signupForm.fullname.value;
+      const email = document.signupForm.email.value;
+      const password = document.signupForm.password.value;
+      const confirm = document.signupForm.confirm.value;
+
+      if (name === "") {
+        alert("Please enter your full name.");
+        return false;
+      }
+      if (email === "") {
+        alert("Please enter your email.");
+        return false;
+      }
+      if (password === "") {
+        alert("Please enter a password.");
+        return false;
+      }
+      if (confirm !== password) {
+        alert("Passwords do not match.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
