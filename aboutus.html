@@ -1,51 +1,209 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="utf-8">
-  <title>Boat Haraj - Main Page</title>
+  <title>About Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f4f4f4; }
-    h1 { margin:0; padding:12px; text-align:center; background:#2b4a6f; color:#fff; }
-    .navbar ul { list-style:none; margin:0; padding:0; overflow:hidden; background:#404040; }
-    .navbar li { float:left; }
-    .navbar a { display:block; color:#fff; text-decoration:none; padding:12px 16px; text-align:center; }
-    .navbar a:hover { background:#222; }
-    .clearfix::after { content:""; display:table; clear:both; }
-    main { text-align:center; padding:10px; }
-    footer { background:#ddd; text-align:center; padding:8px; margin-top:10px; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    main {
+      margin: 0 10px;
+      background-color: white;
+      border-radius: 10px;
+      line-height: 1.5;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* Navbar styles */
+    .navbar ul {
+      list-style-type: none;
+      background-color: hsl(0, 0%, 25%);
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: hsl(0, 0%, 10%);
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 300px;
+    }
+
+    /* Index table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #eee;
+    }
+
+    a.index-link {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a.index-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Floated image */
+    .float-boat {
+      float: right;
+      width: 300px;
+      max-width: 40%;
+      height: auto;
+      margin: 0 0 5px 10px;
+      border-radius: 8px;
+    }
+
+    section {
+      margin: 0 10px 10px 10px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ddd;
+      margin-top: 10px;
+    }
+
+    .clear { clear: both; }
   </style>
 </head>
-<body>
-  <h1>Boat Haraj</h1>
 
-  <nav class="navbar clearfix">
+<body>
+  <nav class="navbar">
     <ul>
       <li><a href="mainpage.html">Home</a></li>
-      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="#top">About us</a></li>
       <li><a href="Signup.html">Sign-up</a></li>
-      <li><a href="Login.html">Log-in</a></li>
+      <li><a href="Login.html">log-in</a></li>
     </ul>
   </nav>
 
   <main>
-    <h2>Welcome</h2>
-    <p>Buy, sell, rent, and deliver boats — all in one place.</p>
+    <h1>About Us</h1>
 
-    <!-- Use a local image so size stays stable -->
-    <img src="img/boats.jpg" alt="Boats" width="800" height="533" usemap="#boatmap">
+    <!-- Index Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Section</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a class="index-link" href="#problem">What is the Problem?</a></td>
+          <td>Explains what issues people face when trying to buy or rent boats.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a class="index-link" href="#solution">Proposed Solution</a></td>
+          <td>Describes how our website solves these issues easily and safely.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a class="index-link" href="#better">Why It’s Better</a></td>
+          <td>Shows why our idea is better than general marketplaces.</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <!-- name EXACTLY matches usemap (including case) -->
-    <map name="boatmap">
-      <!-- Simple rectangle over middle boats area -->
-      <area shape="rect" coords="100,200,700,450" href="aboutus.html" alt="About Us" title="About Us">
-    </map>
+    <img
+      class="float-boat"
+      src="https://upload.wikimedia.org/wikipedia/commons/1/18/Small_boats_docked_in_harbour.jpg"
+      alt="Small boats docked in a harbour"
+    >
 
-    <p>Click the boats to go to the About Us page.</p>
+    <section id="problem">
+      <h2>1. What is the Problem?</h2>
+      <p>
+        Many people love boats but find it hard to buy, sell, or rent them online. On normal websites,
+        boat listings are mixed with cars, bikes, and other items, making it confusing and time-consuming.
+        Sellers can’t reach their real audience, and buyers waste time searching through unrelated ads.
+      </p>
+      <p>
+        Also, there’s no system for safe communication or trusted delivery between users.
+        This makes transactions risky and less reliable. Renting boats is even harder —
+        most sites are not built for short-term rentals, and people don’t know who to trust.
+      </p>
+    </section>
+
+    <section id="solution">
+      <h2>2. What is the Proposed Solution?</h2>
+      <p>
+        Our idea is to create <strong>Boat Haraj</strong> — a platform focused only on boats.
+        It combines all actions related to boats in one simple website:
+        buying, selling, renting, and even delivering.
+      </p>
+      <ul>
+        <li><strong>Buy & Sell:</strong> Post ads with clear photos, location, and price.</li>
+        <li><strong>Rent:</strong> Short or long-term options with schedules and conditions.</li>
+        <li><strong>Delivery:</strong> Optional delivery requests with automatic cost calculation.</li>
+        <li><strong>Search & Filters:</strong> Filter by boat type, size, location, and price range.</li>
+        <li><strong>Chat:</strong> Built-in chat for direct communication.</li>
+        <li><strong>Ratings:</strong> Feedback system for users and delivery partners.</li>
+      </ul>
+      <p>
+        Everything happens in one trusted and focused environment designed for the boating community.
+      </p>
+    </section>
+
+    <section id="better">
+      <h2>3. Why It’s Better?</h2>
+      <p>
+        Boat Haraj is different because it focuses only on <strong>boats</strong>.
+        This specialization makes the platform more efficient, reliable, and easy to use.
+      </p>
+      <ul>
+        <li><strong>Focus:</strong> No mixed results — only boats.</li>
+        <li><strong>All-in-One:</strong> Buy, sell, rent, and deliver easily.</li>
+        <li><strong>Quick Search:</strong> Find what you need in seconds with filters.</li>
+        <li><strong>Trust:</strong> Verified users and ratings create safety.</li>
+        <li><strong>Simplicity:</strong> Designed for all users, even beginners.</li>
+      </ul>
+    </section>
+
+    <div class="clear"></div>
   </main>
 
   <footer>
-    <p>Contact: info@boatharaj.example • © 2025 Boat Haraj</p>
+    <p>Contact us at <strong>info@boatharaj.example</strong> | © 2025 Boat Haraj. All rights reserved.</p>
   </footer>
 </body>
 </html>
